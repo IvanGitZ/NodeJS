@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Website</title>
+	<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+	<% include ../public/nav.ejs %>
+	<h1>这是第<%= id %>篇博客</h1>
+	<ul>
+		<% data.forEach(function(myitem){ %>
+			<li>
+				<strong>标题:</strong><%= myitem.title %>
+				<strong>作者:</strong><%= myitem.author %>
+				<strong>内容:</strong><%= myitem.body %>
+			</li>
+		<% }) %>
+	</ul>
+</body>
+</html>
